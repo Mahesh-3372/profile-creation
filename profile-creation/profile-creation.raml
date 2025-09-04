@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: Profile creation
+types:
+  profile-creation: !include create-request-payload-dataType.raml
+
+
+/profiles:
+  post:
+    description: Create a new user profile
+    body:
+      application/json:
+        type: profile-creation
+        example: !include profile-creation-example.json
+    responses:
+      201:
+        body:
+          application/json:
+            example: 
+              {
+                "id": 101,
+                "message": "Profile created successfully"
+              }
