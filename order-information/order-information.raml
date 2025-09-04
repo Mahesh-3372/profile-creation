@@ -1,0 +1,39 @@
+#%RAML 1.0
+title: orderInformation
+description: This API gives about order related information to the customers
+
+types:
+  order-request: !include order-request.raml
+
+traits:
+  client-credentials: !include client-credentials.raml
+
+/orders:
+  description: This endpoint for Create a new order
+  post:
+    is: [client-credentials]
+    body:
+      application/json:
+        type: order-request
+        example: !include order-create-request-payload-.json
+          
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                            "status": "order created successfully",
+                            "orderId": "ORD01"
+                        }
+/getOrders:
+  get:
+    description: "This endpoint gives Retrive specific order by orderId"
+    is: [ client-credentials]
+    responses:
+      200:
+        body:
+          application/json:
+            items:
+              type: order-request
+            example: !include get-orders-response-example.json

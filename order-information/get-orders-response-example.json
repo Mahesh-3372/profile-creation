@@ -1,0 +1,14 @@
+[
+     {
+  "orderId": "ORD01",
+  "customerId": "CUST001",
+  "status": "pending",
+  "productName": "Mouse"
+},
+ {
+  "orderId": "ORD02",
+  "customerId": "CUST002",
+  "status": "delivered",
+  "productName": "key-board"
+}
+   ]
