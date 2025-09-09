@@ -1,0 +1,10 @@
+{
+  "main": "product-creation.raml",
+  "name": "account-creation",
+  "groupId": "02c3662c-04c6-480f-a8d0-4e6fc659f84f",
+  "assetId": "account-creation",
+  "version": "1.0.0",
+  "classifier": "raml",
+  "tags": [],
+  "descriptorVersion": "1.0.0"
+}
